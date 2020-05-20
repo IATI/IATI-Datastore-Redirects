@@ -1,0 +1,10 @@
+version: "2.2"
+
+services:
+  nginx:
+    image: openresty/openresty:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./config/conf.d:/etc/nginx/conf.d
+    restart: always
